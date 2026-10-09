@@ -1,0 +1,29 @@
+<div class="bg-slate-900 text-white min-h-dvh w-full p-5">
+    <div class="flex flex-col gap-2">
+        <h3 class="text-xl font-bold">User Profile</h3>
+        <p>First Name: {{ firstName() }}</p>
+        <p>Last Name: {{ lastName() }}</p>
+        <p>Full Name: {{ fullName() }}</p>
+
+        <div class="flex gap-5">
+            <button
+                (click)="updateFirstName()"
+                class="cursor-pointer bg-blue-500 w-xs rounded-md py-1"
+            >
+                Randomized First Name
+            </button>
+            <button
+                (click)="updateLastName()"
+                class="cursor-pointer bg-blue-500 w-xs rounded-md py-1"
+            >
+                Randomized Last Name
+            </button>
+            <button
+                (click)="updateFullName()"
+                class="cursor-pointer bg-blue-500 w-xs rounded-md py-1"
+            >
+                Randomized Full Name
+            </button>
+        </div>
+    </div>
+</div>
