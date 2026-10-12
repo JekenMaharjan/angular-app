@@ -1,7 +1,11 @@
 <div class="flex items-center justify-center bg-slate-900 text-white min-h-dvh w-full p-5">
     <div class="flex flex-col bg-slate-700 p-5 rounded-md w-md">
         <h2 class="font-bold text-xl mb-4 text-center">User Form</h2>
-    
+
+        <p appHighlight>If this text is red, your directive is working!</p>
+
+        <p appHoverEffect>Hover me!</p>
+
         <!-- Add User Form -->
         <form (submit)="handleSubmit($event)" class="space-y-4">
             <!-- Name -->

@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
+import { Highlight } from '../directives/highlight';
+import { HoverEffect } from '../directives/hover-effect';
 
 // Define the TypeScript interface for data model
 interface ProfileData {
@@ -9,7 +11,7 @@ interface ProfileData {
 
 @Component({
     selector: 'app-user',
-    imports: [FormField],
+    imports: [FormField, Highlight, HoverEffect],
     templateUrl: './user.html',
     styleUrl: './user.css',
 })
