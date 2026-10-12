@@ -103,18 +103,7 @@ export class Profile {
     }
 
     updateFullName() {
-        // List of names & castes
-        const names = ['Gopal', 'Bob', 'Alice', 'David', 'Site', 'Hari'];
-        const caste = ['Maharjan', 'Rai', 'Shakya', 'Dangol', 'Sthapit', 'Gurung'];
-
-        // Pick a random index from the array
-        const nameRandomIndex = Math.floor(Math.random() * names.length);
-        const casteRandomIndex = Math.floor(Math.random() * caste.length);
-        const selectedName = names[nameRandomIndex];
-        const selectedCaste = names[casteRandomIndex];
-
-        // Set the signal to the signal randomly chosen name
-        this.firstName.set(selectedName);
-        this.lastName.set(selectedCaste);
+        this.updateFirstName();
+        this.updateLastName();
     }
 }
