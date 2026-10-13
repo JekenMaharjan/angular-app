@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
 import { Highlight } from '../directives/highlight';
 import { HoverEffect } from '../directives/hover-effect';
+import { Api } from '../api';
 
 // Define the TypeScript interface for data model
 interface ProfileData {
@@ -16,6 +17,20 @@ interface ProfileData {
     styleUrl: './user.css',
 })
 export class User {
+    profiles: any[] = [];
+
+    constructor(private api: Api) {
+        this.api.getProfiles().subscribe({
+            next: (res) => {
+                this.profiles = res;
+            },
+            error: (err) => {
+                console.error('Error fetching profiles', err);
+            },
+        });
+    }
+    
+
     // Create the source-of-truth model signal
     profileModel = signal<ProfileData>({
         name: '',

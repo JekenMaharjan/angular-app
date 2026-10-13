@@ -6,6 +6,15 @@
 
         <p appHoverEffect>Hover me!</p>
 
+        <h2>Dating Profiles from NestJS Backend:</h2>
+
+        @for (p of profiles; track p.id) {
+        <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+            <h3>{{ p.name }}</h3>
+            <p>{{ p.description }}</p>
+        </div>
+        }
+
         <!-- Add User Form -->
         <form (submit)="handleSubmit($event)" class="space-y-4">
             <!-- Name -->
